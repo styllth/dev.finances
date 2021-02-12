@@ -33,23 +33,27 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ---
 
-## 💻 Projeto
+## :computer: Projeto
 
 O dev.finances é uma aplicação de controle financeiro, onde é possível cadastrar e excluir transações e ver o saldo de entrada e saída 💰
 
 ---
 
-## 🔖 Layout
+## :label: Layout
 
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/7Vu9DzUaCZIV4nibzkjgB4/dev.finance%24-Maratona-Discover). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 ---
 
-## Features
+## :building_construction: Features
 
 - Favicon
 - Dark Theme
-- Mudança de Cor no Display Valor total de acordo com o saldo positivo ou negativo
+- Mudança de Cor nos Displays:
+  - Entradas: cor verde
+  - Saídas: cor vermelha
+  - Total: cor de acordo com o saldo positivo ou negativo
+- Botão para apagar todas a transações
 
 ---
 

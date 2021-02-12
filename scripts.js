@@ -60,9 +60,17 @@ const Transaction = {
   },
 
   remove(index) {
-    Transaction.all.splice(index, 1);
+    if (confirm("Clique em OK para continuar")) {
+      Transaction.all.splice(index, 1);
+      App.reload();
+    }
+  },
 
-    App.reload();
+  removeAll() {
+    if (confirm("Clique em OK para continuar")) {
+      Transaction.all = [];
+      App.reload();
+    }
   },
 
   incomes() {

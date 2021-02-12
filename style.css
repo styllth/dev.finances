@@ -129,7 +129,7 @@ header {
 /* Balance ===================== */
 #balance {
   margin-top: -8rem;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: slidein;
 }
 
@@ -173,6 +173,7 @@ header {
   background: var(--red);
   color: white;
 }
+
 #incomeDisplay {
   color: var(--green);
 }
@@ -189,10 +190,21 @@ header {
   animation-duration: 3s;
   animation-name: slideTransaction;
 }
+
 #data-table {
   width: 100%;
   border-spacing: 0 0.5rem;
   color: #969cb3;
+}
+
+#transaction .actions {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 1rem;
+}
+
+#transaction .actions .draw {
+  color: var(--red);
 }
 
 table thead tr th:first-child,
@@ -207,10 +219,8 @@ table tbody tr td:last-child {
 
 table thead th {
   background: white;
-
   font-weight: normal;
   padding: 1rem 2rem;
-
   text-align: left;
 }
 

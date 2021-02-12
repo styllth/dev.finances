@@ -63,7 +63,10 @@
     <section id="transaction">
       <h2 class="sr-only">Transações</h2>
 
-      <a href="#" onclick="Modal.open()" class="button new">+ Nova Transação</a>
+      <div class="actions">
+        <a href="#" onclick="Modal.open()" class="button new">+ Nova Transação</a>
+        <a href="#" onclick="Transaction.removeAll()" class="button draw">- Excluir todas as Transações</a>
+      </div>
 
       <table id="data-table">
         <thead>
