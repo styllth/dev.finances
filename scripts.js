@@ -1,13 +1,35 @@
+/* selectors */
+const modal = document.querySelector(".modal-overlay");
+const switchThemeMode = document.querySelector(".switch");
+const themeMode = {
+  light: "light",
+  dark: "dark",
+};
+
+const Theme = {
+  toggleTheme() {
+    switchThemeMode.checked ? Theme.setLightTheme() : Theme.setDarkTheme();
+  },
+  setLightTheme() {
+    document.body.classList.remove(themeMode.dark);
+    document.body.classList.add(themeMode.light);
+  },
+  setDarkTheme() {
+    document.body.classList.remove(themeMode.light);
+    document.body.classList.add(themeMode.dark);
+  },
+};
+
 const Modal = {
   open() {
     // Abrir modal
     // Adicionar a class active ao modal
-    document.querySelector(".modal-overlay").classList.add("active");
+    modal.classList.add("active");
   },
   close() {
     // fechar o modal
     // remover a class active do modal
-    document.querySelector(".modal-overlay").classList.remove("active");
+    modal.classList.remove("active");
   },
 };
 
@@ -21,6 +43,10 @@ const Storage = {
       "dev.finances:transactions",
       JSON.stringify(transactions)
     );
+  },
+
+  setTheme(theme) {
+    localStorage.setItem("dev.finances:theme", theme);
   },
 };
 
@@ -135,6 +161,10 @@ const Utils = {
 
     return signal + value;
   },
+
+  toggleTheme() {
+    document.querySelector("body").classList.toggle("dark-mode");
+  },
 };
 
 const Form = {
@@ -204,6 +234,8 @@ const App = {
     DOM.updateBalance();
 
     Storage.set(Transaction.all);
+
+    Theme.toggleTheme();
   },
   reload() {
     DOM.clearTransactions();
