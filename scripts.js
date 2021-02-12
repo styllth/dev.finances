@@ -119,15 +119,20 @@ const DOM = {
   },
 
   updateBalance() {
-    document.getElementById("incomeDisplay").innerHTML = Utils.formatCurrency(
-      Transaction.incomes()
-    );
-    document.getElementById("expenseDisplay").innerHTML = Utils.formatCurrency(
-      Transaction.expenses()
-    );
-    document.getElementById("totalDisplay").innerHTML = Utils.formatCurrency(
-      Transaction.total()
-    );
+    let incomeDisplay = document.getElementById("incomeDisplay");
+    let expenseDisplay = document.getElementById("expenseDisplay");
+    let totalDisplay = document.getElementById("totalDisplay");
+
+    incomeDisplay.innerHTML = Utils.formatCurrency(Transaction.incomes());
+    expenseDisplay.innerHTML = Utils.formatCurrency(Transaction.expenses());
+    totalDisplay.innerHTML = Utils.formatCurrency(Transaction.total());
+    if (Transaction.total() < 0) {
+      totalDisplay.parentNode.classList.add("total-minus");
+      totalDisplay.parentNode.classList.remove("total-plus");
+    } else {
+      totalDisplay.parentNode.classList.add("total-plus");
+      totalDisplay.parentNode.classList.remove("total-minus");
+    }
   },
 
   clearTransactions() {

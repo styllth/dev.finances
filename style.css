@@ -142,11 +142,10 @@ header {
 .card {
   background: white;
   padding: 1.5rem 2rem;
-  border-radius: 0.25rem;
-
+  border-radius: 1.5rem;
   margin-bottom: 2rem;
-
   color: var(--dark-blue);
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(20, 20, 20, 0.2);
 }
 
 .card h3 {
@@ -165,9 +164,21 @@ header {
   margin-top: 1rem;
 }
 
-.card.total {
+.card.total-plus {
   background: var(--green);
   color: white;
+}
+
+.card.total-minus {
+  background: var(--red);
+  color: white;
+}
+#incomeDisplay {
+  color: var(--green);
+}
+
+#expenseDisplay {
+  color: var(--red);
 }
 
 /* Table ===================== */
@@ -251,11 +262,13 @@ td.expense {
 .modal-overlay.active {
   opacity: 1;
   visibility: visible;
+  transition: 1s;
 }
 
 .modal {
   background: #f0f2f5;
   padding: 2.4rem;
+  border-radius: 2rem;
 
   position: relative;
   z-index: 1;
@@ -296,6 +309,7 @@ input {
 .input-group.actions .button,
 .input-group.actions button {
   width: 48%;
+  border-radius: 1rem;
 }
 
 /* Footer ===================== */
@@ -349,7 +363,7 @@ footer {
 /* Dark Theme ====================== */
 .dark {
   background: var(--dark-background);
-  transition: 1s;
+  transition: all 1s ease-in-out;
 }
 
 .dark header {
@@ -358,6 +372,20 @@ footer {
 
 .dark footer {
   color: var(--dark-text);
+}
+
+.dark .new,
+.dark a {
+  color: #85f0b6;
+}
+
+.dark .modal {
+  background: var(--dark-background);
+  color: var(--dark-text);
+}
+
+.dark .modal .button.cancel {
+  background: var(--background);
 }
 
 .switch {

@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img alt="dev.finances" src=".github/Screenshot.png" width="100%">
+  <img alt="dev.finances" src=".github/screenshot.png" width="100%">
 </p>
 
 #### Projeto desenvolvido durante a Maratona Discover promovido pela [Rocketseat](https://rocketseat.com.br/)
